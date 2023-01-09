@@ -1,0 +1,9 @@
+{
+    "name": "voodoo/localhost",
+    "autoload": {
+        "psr-4": {
+            "Voodoo\\Localhost\\": "src/"
+        }
+    },
+    "require": {}
+}
