@@ -2,8 +2,23 @@
     "name": "voodoo/localhost",
     "autoload": {
         "psr-4": {
-            "Voodoo\\Localhost\\": "src/"
+            "App\\": "App/"
         }
     },
-    "require": {}
+    "authors": [
+        {
+            "name": "Fafurin",
+            "email": "ffafurin@mail.ru"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.21",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "phpunit Test --testdox --colors"
+    }
 }
