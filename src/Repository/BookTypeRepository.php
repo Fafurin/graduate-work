@@ -21,24 +21,6 @@ class BookTypeRepository extends ServiceEntityRepository
         parent::__construct($registry, BookType::class);
     }
 
-    public function save(BookType $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->persist($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }
-
-    public function remove(BookType $entity, bool $flush = false): void
-    {
-        $this->getEntityManager()->remove($entity);
-
-        if ($flush) {
-            $this->getEntityManager()->flush();
-        }
-    }
-
 //    /**
 //     * @return BookType[] Returns an array of BookType objects
 //     */
