@@ -24,7 +24,7 @@ class BookTypeServiceTest extends TestCase
 
         $service = new BookTypeService($repository);
 
-        $expectedResult = new BookTypeListResponse([new BookTypeListItem(12,'Test','test')]);
+        $expectedResult = new BookTypeListResponse([new BookTypeListItem(12, 'Test', 'test')]);
 
         $this->assertEquals($expectedResult, $service->getBookTypes());
 

@@ -1,0 +1,9 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Publishing API
+            description: API for the management system of the Penza State University Publishing
+            version: 1.0.0
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api/v1

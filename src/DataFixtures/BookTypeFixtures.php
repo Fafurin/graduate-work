@@ -10,9 +10,9 @@ class BookTypeFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        $manager->persist((new BookType())->setTitle('Монография')->setSlug('monografiya'));
-        $manager->persist((new BookType())->setTitle('Научный журнал')->setSlug('nauchnyy-zhurnal'));
-        $manager->persist((new BookType())->setTitle('Учебное пособие')->setSlug('uchebnoe-posobie'));
+        $manager->persist((new BookType())->setTitle('Monograph')->setSlug('monograph'));
+        $manager->persist((new BookType())->setTitle('Scientific journal')->setSlug('scientific-journal'));
+        $manager->persist((new BookType())->setTitle('Study guide')->setSlug('study-guide'));
 
         $manager->flush();
     }

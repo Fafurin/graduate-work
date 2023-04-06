@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": 6,
+      "title": "Monograph",
+      "slug": "monograph"
+    },
+    {
+      "id": 7,
+      "title": "Scientific journal",
+      "slug": "scientific-journal"
+    },
+    {
+      "id": 8,
+      "title": "Study guide",
+      "slug": "study-guide"
+    }
+  ]
+}
