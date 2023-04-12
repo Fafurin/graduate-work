@@ -6,7 +6,7 @@ use App\Entity\BookType;
 use App\Model\BookTypeListItem;
 use App\Model\BookTypeListResponse;
 use App\Repository\BookTypeRepository;
-use App\Service\BookTypeService;
+use App\Service\BookType\BookTypeService;
 use Doctrine\Common\Collections\Criteria;
 use PHPUnit\Framework\TestCase;
 
