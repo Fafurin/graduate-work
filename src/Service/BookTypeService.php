@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\BookType;
+namespace App\Service;
 
 use App\Entity\BookType;
 use App\Exception\BookTypeNotFoundException;
@@ -35,14 +35,10 @@ class BookTypeService implements BookTypeServiceInterface
             );
         }
 
-        return new BookTypeListItem(
-            $bookType->getId(),
-            $bookType->getTitle(),
-            $bookType->getSlug()
-        );
+        return $this->getTypeListItem($bookType);
     }
 
-    function getBookTypeById(int $id): ?BookTypeListItem
+    public function getBookTypeById(int $id): ?BookTypeListItem
     {
         $bookType = $this->bookTypeRepository->find($id);
         if (!$bookType) {
@@ -51,6 +47,11 @@ class BookTypeService implements BookTypeServiceInterface
             );
         }
 
+        return $this->getTypeListItem($bookType);
+    }
+
+    private function getTypeListItem(BookType $bookType): BookTypeListItem
+    {
         return new BookTypeListItem(
             $bookType->getId(),
             $bookType->getTitle(),

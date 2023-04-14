@@ -7,7 +7,7 @@ use App\Command\BookType\DeleteBookTypeHandlerInterface;
 use App\Command\BookType\UpdateBookTypeHandlerInterface;
 use App\Model\BookTypeListItem;
 use App\Model\BookTypeListResponse;
-use App\Service\BookType\BookTypeServiceInterface;
+use App\Service\BookTypeServiceInterface;
 use Nelmio\ApiDocBundle\Annotation\Model;
 use OpenApi\Attributes as OA;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,8 +18,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class BookTypeController extends AbstractController
 {
     public function __construct(
-        private readonly BookTypeServiceInterface $bookTypeService,
-        private readonly CreateBookTypeHandlerInterface $createBookTypeHandler,
+        private readonly BookTypeServiceInterface         $bookTypeService,
+        private readonly CreateBookTypeHandlerInterface   $createBookTypeHandler,
         private readonly UpdateBookTypeHandlerInterface $updateBookTypeHandler,
         private readonly DeleteBookTypeHandlerInterface $deleteBookTypeHandler,
     ){}
@@ -90,6 +90,6 @@ class BookTypeController extends AbstractController
     {
         $this->deleteBookTypeHandler->handle($id);
 
-        return $this->json(['book type' => 'updated']);
+        return $this->json(['book type' => 'deleted']);
     }
 }

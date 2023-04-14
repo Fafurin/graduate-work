@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service\BookType;
+namespace App\Service;
 
 use App\Model\BookTypeListItem;
 use App\Model\BookTypeListResponse;
