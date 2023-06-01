@@ -1,5 +1,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ListCustomer from './components/Customer/ListCustomer';
+import CreateCustomer from './components/Customer/CreateCustomer';
+import EditCustomer from './components/Customer/EditCustomer';
 import ListBookType from './components/BookType/ListBookType';
 import CreateBookType from './components/BookType/CreateBookType';
 import EditBookType from './components/BookType/EditBookType';
@@ -15,6 +18,11 @@ function App() {
                 <BrowserRouter>
                     <Routes>
                         <Route index element={<Index />}/>
+
+                        <Route path="customers" element={<ListCustomer />}/>
+                        <Route path="customers/create" element={<CreateCustomer />}/>
+                        <Route path="customers/:id/edit" element={<EditCustomer />}/>
+
                         <Route path="book-types" element={<ListBookType />}/>
                         <Route path="book-types/create" element={<CreateBookType />}/>
                         <Route path="book-types/:id/edit" element={<EditBookType />}/>
